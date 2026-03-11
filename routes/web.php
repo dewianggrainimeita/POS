@@ -12,3 +12,10 @@ Route::get('/', function () {
 Route::get('/level', [LevelController::class, 'index']);
 Route::get('/kategori', [KategoriController::class, 'index']);
 Route::get('/user', [UserController::class, 'index']); // <--- Tambahkan ini
+Route::get('/user/tambah', [UserController::class, 'tambah']);
+// Route untuk Ubah Data (Langkah 12 & 15)
+Route::get('/user/ubah/{id}', [UserController::class, 'ubah']);
+Route::put('/user/ubah_simpan/{id}', [UserController::class, 'ubah_simpan']);
+
+// Route untuk Hapus Data (Langkah 18)
+Route::get('/user/hapus/{id}', [UserController::class, 'hapus']);
